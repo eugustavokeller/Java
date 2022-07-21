@@ -1,3 +1,4 @@
+import java.util.Locale;
 
 public class fixacao {
 
@@ -14,7 +15,13 @@ public class fixacao {
 		double measure = 53.234567;
 		
 		
-		System.out.printf("Products:%n%s, which price is $ %.2f%n%s, which price is $ %.2f", product1, price1, product2, price2);
+		System.out.printf("Products:%n%s, which price is $ %.2f%n%s, which price is $ %.2f%n", product1, price1, product2, price2);
+		System.out.printf("%nRecord %d years old, code %d and gender: %s%n", age, code, gender);
+		System.out.printf("%nMeasue with eight decimal places: %.8f%n", measure);
+		System.out.printf("Rouded (three decimal places): %.3f%n", measure);
+		
+		Locale.setDefault(Locale.US);
+		System.out.printf("US decimal point: %.3f", measure);
 
 	}
 
